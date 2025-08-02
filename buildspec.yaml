@@ -18,7 +18,7 @@ phases:
       - echo "Build Completed on $(date)..."
       - mkdir -p deploy
       # Avoid copying 'deploy' into itself
-      - cp -r !(deploy) deploy/
+      - cp -r dist/* deploy/
       #- cp -r scripts/* deploy/scripts/
 
 artifacts:
