@@ -16,11 +16,10 @@ phases:
   post_build:
     commands:
       - echo "Build Completed on $(date)..."
-      - mkdir -p deploy/scripts
+      - mkdir -p deploy
       # Avoid copying 'deploy' into itself
-      - shopt -s extglob
       - cp -r !(deploy) deploy/
-      - cp -r scripts/* deploy/scripts/
+      #- cp -r scripts/* deploy/scripts/
 
 artifacts:
   files:
