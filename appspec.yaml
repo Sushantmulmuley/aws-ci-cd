@@ -6,18 +6,18 @@ files:
     destination: /home/ec2-user/nodeapp
 
 hooks:
-before_install:
-  - location: scripts/before_install.sh
-    timeout: 60
-    runas: ec2-user
+  before_install:
+    - location: scripts/before_install.sh
+      timeout: 60
+      runas: ec2-user
 
-after_install:
-  - location: scripts/after_install.sh
-    timeout: 60
-    runas: ec2-user
-application_start:
-  - location: scripts/application_start.sh
-    timeout: 60
-    runas: ec2-user
+  after_install:
+    - location: scripts/after_install.sh
+      timeout: 60
+      runas: ec2-user
+  application_start:
+    - location: scripts/application_start.sh
+      timeout: 60
+      runas: ec2-user
 
-    
+      
